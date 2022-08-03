@@ -16,6 +16,8 @@ function App() {
             <li><Link href='/manatee'>Manatee</Link></li>
             <li><Link href='/narwal'>Narwhal</Link></li>
             <li><Link href='/whale'>Whale</Link></li>
+            <li><Link href="/whale/beluga">Beluga Whale</Link></li>
+            <li><Link href="/whale/blue">Blue whale</Link></li>
           </ul>
         </nav>
         <Routes>
@@ -25,8 +27,11 @@ function App() {
           <Route path="/narwhal">
             <Narwhal />
           </Route>
-          <Route path="/whale">
+          <Route exact path="/whale">
             <Whale />
+          </Route>
+          <Route path='/whale/:type'>
+            <Whale/>
           </Route>
         </Routes>
       </BrowserRouter>
